@@ -1,0 +1,150 @@
+.profile {
+    padding: 0 10px;
+    display: flex;
+    gap: 26px;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    &__woman {
+        background-image: url(./img/woman.png);
+        width: clamp(18.75rem, 12.703rem + 30.23vw, 42.938rem);
+        position: relative;
+
+
+        @media (max-width:1109px) {
+            height: clamp(25rem, 12.938rem + 30.93vw, 34.375rem);
+            background-position: top center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        @media (max-width:623px) {
+            height: clamp(23.75rem, 17.809rem + 29.7vw, 29.375rem);
+        }
+
+        &-wrap {
+            display: flex;
+            gap: clamp(1.25rem, 0.938rem + 1.56vw, 2.5rem);
+            position: absolute;
+            bottom: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: center;
+        }
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            gap: clamp(0.313rem, 0.078rem + 1.17vw, 1.25rem);
+            text-align: center;
+
+            & h3 {
+                font-family: var(--font-family);
+                font-weight: 700;
+                font-size: clamp(1.125rem, 0.813rem + 1.56vw, 2.375rem);
+                line-height: 130%;
+                text-align: center;
+                color: #0c0b26;
+            }
+
+            & p {
+                white-space: nowrap;
+                font-family: var(--font-family);
+                font-weight: 500;
+                font-size: clamp(0.875rem, 0.766rem + 0.55vw, 1.313rem);
+                line-height: 140%;
+                text-align: center;
+                color: #3d3d40;
+            }
+        }
+    }
+
+    &__about {
+        max-width: 525px;
+        padding-top: clamp(1.25rem, -0.271rem + 7.6vw, 5rem);
+
+        & h3 {
+            font-family: var(--font-family);
+            font-weight: 700;
+            font-size: clamp(1.75rem, 1.594rem + 0.78vw, 2.375rem);
+            line-height: 130%;
+            color: #0c0b26;
+        }
+
+        &>p {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 160%;
+            color: #3d3d40;
+            margin-top: 25px;
+        }
+
+        &-wrapper {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        &-item {
+            padding-left: 79px;
+            position: relative;
+
+            & h4 {
+                font-family: var(--font-family);
+                font-weight: 500;
+                font-size: 26px;
+                line-height: 140%;
+                color: #0c0b26;
+            }
+
+            & p {
+                font-family: var(--font-family);
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 160%;
+                color: #3d3d40;
+                margin-top: 10px;
+            }
+
+            &-before {
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+                font-family: var(--font-family);
+                font-weight: 500;
+                font-size: 21px;
+                color: #0c0b26;
+                left: 0px;
+                top: 0px;
+
+                &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    border: 3px solid #E5A741;
+                    width: 25px;
+                    height: 50px;
+                    border-left: none;
+                    border-radius: 0 100% 100% 0 / 50%;
+                    top: -4px;
+                    left: 25px;
+                }
+            }
+
+            &-dash {
+                width: 0;
+                height: calc(100% - 25px);
+                border: 1px dashed #e5a741;
+                position: absolute;
+                left: 25px;
+                top: 50px;
+            }
+        }
+    }
+}
