@@ -1,0 +1,83 @@
+.cta {
+    background-image: url(./img/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 107px 10px;
+    margin-top: clamp(5rem, 4.406rem + 2.97vw, 7.375rem);
+
+    &__wrapper {
+        max-width: 1070px;
+        margin: 0 auto;
+    }
+
+    &__block {
+        max-width: 401px;
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+
+        & h3 {
+            font-family: var(--font-family);
+            font-weight: 700;
+            font-size: clamp(1.75rem, 1.594rem + 0.78vw, 2.375rem);
+            line-height: 130%;
+            color: #0c0b26;
+        }
+
+        & p {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 160%;
+            color: #3d3d40;
+        }
+
+        & form {
+            display: flex;
+        }
+
+        & form input {
+            border: none;
+            padding: 12px 24px;
+            width: clamp(12.563rem, 12.516rem + 0.23vw, 12.75rem);
+            height: 50px;
+            background: #fff;
+            border: 2px solid #f54f1d00;
+            border-right: none;
+
+            &::placeholder {
+                font-family: var(--font-family);
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 160%;
+                color: #3d3d40;
+            }
+
+            &:focus {
+                outline: none !important;
+                border-color: #f5511d;
+            }
+        }
+
+        & form button {
+            padding: 12px 24px;
+            width: 99px;
+            height: 50px;
+            background: #f5511d;
+            border: none;
+            cursor: pointer;
+            border: 2px solid #f54f1d00;
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 160%;
+            color: #fff;
+
+            &:hover {
+                background-color: #fff;
+                border-color: #f5511d;
+                color: #f5511d;
+            }
+        }
+    }
+}

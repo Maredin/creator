@@ -50,10 +50,12 @@
         background-color: #F5511D;
         cursor: pointer;
         border: none;
+        border: 2px solid #f54f1d00;
 
         &:hover {
             color: #F5511D;
             background-color: #fff;
+            border-color: #f5511d;
         }
     }
 
